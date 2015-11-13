@@ -1,9 +1,8 @@
-storm-docker
-============
+storm-docker-with-kafka
+=======================
 
-Dockerfiles for building a storm cluster. Inspired by [https://github.com/ptgoetz/storm-vagrant](https://github.com/ptgoetz/storm-vagrant)
-
-The images are available directly from [https://index.docker.io](https://index.docker.io)
+Dockerfiles for building a storm cluster, with kafka also within the cluster. 
+This is a fork from wurstmeister/storm-docker, with the addition of kafka, the only modification
 
 ##Pre-Requisites
 
@@ -38,19 +37,11 @@ Take a look at docker-compose.yml:
 
 This tells Docker to expose the Docker UI container's port 8080 as port 49080 on the host<br/>
 
-If you are running docker natively you can use localhost. If you're using boot2docker, then do:
+If you are running docker natively you can use localhost. 
 
-    $ boot2docker ip
-    The VM's Host only interface IP address is: 192.168.59.103
-
-Which returns your docker VM's IP.<br/>
 So, to open storm UI, type the following in your browser:
 
     localhost:49080
-
-or
-
-    192.168.59.103:49080
 
 in my case.
 
@@ -66,3 +57,4 @@ Find the forwarded ssh port for the container you wish to connect to (use `docke
     $ ssh root@`boot2docker ip` -p $CONTAINER_PORT
 
 The password is 'wurstmeister' (from: https://registry.hub.docker.com/u/wurstmeister/base/dockerfile/).
+
