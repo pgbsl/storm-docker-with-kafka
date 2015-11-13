@@ -2,7 +2,7 @@ storm-docker-with-kafka
 =======================
 
 Dockerfiles for building a storm cluster, with kafka also within the cluster. 
-This is a fork from wurstmeister/storm-docker, with the addition of kafka, the only modification
+This is a fork from wurstmeister/storm-docker, with the addition of kafka (based 100% on [https://github.com/wurstmeister/kafka-docker](https://github.com/wurstmeister/kafka-docker)), the only modification
 
 ##Pre-Requisites
 
